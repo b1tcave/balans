@@ -1,6 +1,6 @@
 export const primeri = [
     {
-        description: "Za mesec maj 2016.",
+        description: "Kemis DOO, Za mesec maj 2016.",
         params: {
             startDate: "2016-05-05",
             endDate: "2016-06-01",
@@ -823,7 +823,7 @@ export const primeri = [
         ]
     },
     {
-        description: "Za mesec jun 2016.",
+        description: "Kemis DOO, Za mesec jun 2016.",
         params: {
             startDate: "2016-06-02",
             endDate: "2016-07-01",
@@ -1620,7 +1620,7 @@ export const primeri = [
         ]
     },
     {
-        description: "Za mesec jul 2016.",
+        description: "Kemis DOO, Za mesec jul 2016.",
         params: {
             startDate: "2016-07-02",
             endDate: "2016-08-01",
@@ -2443,7 +2443,7 @@ export const primeri = [
         ]
     },
     {
-        description: "August, 2016",
+        description: "Kemis DOO, August, 2016",
         params: {
             startDate: "2016-08-02",
             endDate: "2016-09-01",
@@ -3265,7 +3265,7 @@ export const primeri = [
         ]
     },
     {
-        description: "September, 2016",
+        description: "Kemis DOO, September, 2016",
         params: {
             startDate: "2016-09-02",
             endDate: "2016-10-04",
@@ -4061,7 +4061,7 @@ export const primeri = [
         ]
     },
     {
-        description: "October, 2016",
+        description: "Kemis DOO, October, 2016",
         params: {
             startDate: "2016-10-05",
             endDate: "2016-11-02",
@@ -4883,7 +4883,7 @@ export const primeri = [
         ]
     },
     {
-        description: "November, 2016",
+        description: "Kemis DOO, November, 2016",
         params: {
             startDate: "2016-11-03",
             endDate: "2016-12-02",
@@ -5679,7 +5679,7 @@ export const primeri = [
         ]
     },
     {
-        description: "December, 2016",
+        description: "Kemis DOO, December, 2016",
         params: {
             startDate: "2016-12-03",
             endDate: "2017-01-05",
@@ -6501,7 +6501,7 @@ export const primeri = [
         ]
     },
     {
-        description: "January, 2017",
+        description: "Kemis DOO, January, 2017",
         params: {
             startDate: "2017-01-06",
             endDate: "2017-02-03",
@@ -7323,7 +7323,7 @@ export const primeri = [
         ]
     },
     {
-        description: "February, 2017",
+        description: "Kemis DOO, February, 2017",
         params: {
             startDate: "2017-02-04",
             endDate: "2017-03-03",
@@ -8067,7 +8067,7 @@ export const primeri = [
         ]
     },
     {
-        description: "March, 2017",
+        description: "Kemis DOO, March, 2017",
         params: {
             startDate: "2017-03-04",
             endDate: "2017-04-01",
@@ -8889,7 +8889,7 @@ export const primeri = [
         ]
     },
     {
-        description: "April, 2017",
+        description: "Kemis DOO, April, 2017",
         params: {
             startDate: "2017-04-02",
             endDate: "2017-05-05",
@@ -9685,7 +9685,7 @@ export const primeri = [
         ]
     },
     {
-        description: "May, 2017",
+        description: "Kemis DOO, May, 2017",
         params: {
             startDate: "2017-05-06",
             endDate: "2017-06-05",
@@ -10507,7 +10507,7 @@ export const primeri = [
         ]
     },
     {
-        description: "June, 2017",
+        description: "Kemis DOO, June, 2017",
         params: {
             startDate: "2017-06-06",
             endDate: "2017-07-01",
@@ -11303,7 +11303,7 @@ export const primeri = [
         ]
     },
     {
-        description: "July, 2017",
+        description: "Kemis DOO, July, 2017",
         params: {
             startDate: "2017-07-02",
             endDate: "2017-08-01",
@@ -12125,7 +12125,7 @@ export const primeri = [
         ]
     },
     {
-        description: "August, 2017",
+        description: "Kemis DOO, August, 2017",
         params: {
             startDate: "2017-08-02",
             endDate: "2017-09-01",
@@ -12947,7 +12947,7 @@ export const primeri = [
         ]
     },
     {
-        description: "September, 2017",
+        description: "Kemis DOO, September, 2017",
         params: {
             startDate: "2017-09-02",
             endDate: "2017-10-01",
@@ -13743,7 +13743,7 @@ export const primeri = [
         ]
     },
     {
-        description: "October, 2017",
+        description: "Kemis DOO, October, 2017",
         params: {
             startDate: "2017-10-02",
             endDate: "2017-11-01",
@@ -14565,7 +14565,7 @@ export const primeri = [
         ]
     },
     {
-        description: "November, 2017",
+        description: "Kemis DOO, November, 2017",
         params: {
             startDate: "2017-11-02",
             endDate: "2017-12-01",
@@ -15361,7 +15361,7 @@ export const primeri = [
         ]
     },
     {
-        description: "December, 2017",
+        description: "Kemis DOO, December, 2017",
         params: {
             startDate: "2017-12-02",
             endDate: "2018-01-01",

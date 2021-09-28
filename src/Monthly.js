@@ -22,7 +22,11 @@ import { getSum, getSumOfSums as getTotal } from "./utils";
 import Box from "./Box";
 import "./Monthly.css";
 
-function Test() {
+function Monthly({
+    match: {
+        params: { view = "generated", showCoefficients = false }
+    }
+}) {
     const [primerIndex, setPrimerIndex] = useState(0);
     const primer = primeri[primerIndex];
     const profil = generisiProfilPotrosnje(primer.params);
@@ -138,13 +142,7 @@ function Test() {
                                                 isHoliday && "praznik"
                                             )}
                                         >
-                                            <abbr
-                                                title={`date: ${date}, generated: ${getSum(
-                                                    profil[dayIndex]
-                                                )}, actual: ${getSum(
-                                                    primer.result[dayIndex]
-                                                )}`}
-                                            >
+                                            <abbr title={date}>
                                                 {dayIndex + 1}
                                             </abbr>
                                         </th>
@@ -156,25 +154,49 @@ function Test() {
                                                 primer.result[dayIndex]?.[
                                                     hourIndex
                                                 ] || 0;
-                                            const razlika = actual - generated;
+                                            const difference =
+                                                actual - generated;
                                             const level = Math.min(
                                                 5,
                                                 Math.abs(
-                                                    Math.floor(razlika / 0.005)
+                                                    Math.floor(
+                                                        difference / 0.005
+                                                    )
                                                 )
                                             );
+                                            const value = {
+                                                generated,
+                                                actual,
+                                                difference: difference.toFixed(
+                                                    3
+                                                )
+                                            };
+                                            const Kg = K[hourIndex] || 0;
+                                            const Ka =
+                                                (actual /
+                                                    getSum(
+                                                        primer.result[dayIndex]
+                                                    )) *
+                                                100;
+
+                                            const coefficients = {
+                                                generated: Kg.toFixed(3),
+                                                actual: Ka.toFixed(3),
+                                                difference: (Kg - Ka).toFixed(3)
+                                            };
+                                            const item = showCoefficients
+                                                ? coefficients
+                                                : value;
                                             return (
                                                 <td
                                                     className={`monthly--range-${level}`}
                                                 >
                                                     <abbr
-                                                        title={`actual: ${actual}, razlika: ${razlika.toFixed(
-                                                            3
-                                                        )}, koef: ${
-                                                            K[hourIndex]
-                                                        }`}
+                                                        title={`generated: ${item.generated}, actual: ${item.actual}, diff: ${item.difference}`}
                                                     >
-                                                        {generated}
+                                                        {showCoefficients
+                                                            ? coefficients[view]
+                                                            : value[view]}
                                                     </abbr>
                                                 </td>
                                             );
@@ -190,4 +212,4 @@ function Test() {
     );
 }
 
-export default Test;
+export default Monthly;

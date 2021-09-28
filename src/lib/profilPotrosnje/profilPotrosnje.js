@@ -102,6 +102,7 @@ const generisiProfilPotrosnjeHighPrecision = ({
     let Sr = 0,
         Sn = 0;
 
+    // TODO: izvuci ovo u posebnu funkciju
     // Loop through all the dates and calculate total number of workday hours (Sr) and non-workday hours (Sn)
     let datum = obracunskiPeriodStart;
     for (let i = 0; i < days; i++) {
