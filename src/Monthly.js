@@ -126,7 +126,7 @@ function Monthly({
                                 );
                                 const isSunday = getDow(date) === 0;
                                 const isHoliday = isNationalHoliday(date);
-                                const radni = isSunday || isHoliday;
+                                const radni = !(isSunday || isHoliday);
 
                                 const { Kw, Krd, Knd } = getKoeficijenti({
                                     Kp: primer.params.Kp,
@@ -134,6 +134,23 @@ function Monthly({
                                     datum: date
                                 });
                                 const K = radni ? Krd : Knd;
+
+                                const actualDailySum = getSum(
+                                    primer.result[dayIndex]
+                                );
+                                let maxDifference = 0;
+                                profil.forEach((day, dayIndex) => {
+                                    day.forEach((hour, hourIndex) => {
+                                        const diff =
+                                            primer.result[dayIndex]?.[
+                                                hourIndex
+                                            ] - hour;
+                                        maxDifference = Math.max(
+                                            Math.abs(diff),
+                                            maxDifference
+                                        );
+                                    });
+                                });
                                 return (
                                     <tr key={dayIndex + 1}>
                                         <th
@@ -156,14 +173,6 @@ function Monthly({
                                                 ] || 0;
                                             const difference =
                                                 actual - generated;
-                                            const level = Math.min(
-                                                5,
-                                                Math.abs(
-                                                    Math.floor(
-                                                        difference / 0.005
-                                                    )
-                                                )
-                                            );
                                             const value = {
                                                 generated,
                                                 actual,
@@ -173,11 +182,7 @@ function Monthly({
                                             };
                                             const Kg = K[hourIndex] || 0;
                                             const Ka =
-                                                (actual /
-                                                    getSum(
-                                                        primer.result[dayIndex]
-                                                    )) *
-                                                100;
+                                                (actual / actualDailySum) * 100;
 
                                             const coefficients = {
                                                 generated: Kg.toFixed(3),
@@ -187,6 +192,23 @@ function Monthly({
                                             const item = showCoefficients
                                                 ? coefficients
                                                 : value;
+                                            const level =
+                                                parseInt(
+                                                    Math.abs(
+                                                        (difference /
+                                                            maxDifference) *
+                                                            5
+                                                    )
+                                                ) +
+                                                    difference ==
+                                                0
+                                                    ? 0
+                                                    : 1;
+                                            console.log(
+                                                difference,
+                                                maxDifference,
+                                                level
+                                            );
                                             return (
                                                 <td
                                                     className={`monthly--range-${level}`}

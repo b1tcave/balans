@@ -2,27 +2,30 @@ table.monthly--table {
     font-size: 12px;
 }
 table.monthly--table td {
-    color: white;
+    color: black;
 }
 
 table td.monthly--range-0 {
     background: white;
-    color: black;
 }
 table td.monthly--range-1 {
     background: #acb334;
 }
 table td.monthly--range-2 {
     background: #fab733;
+    color: white;
 }
 table td.monthly--range-3 {
     background: #ff8e15;
+    color: white;
 }
 table td.monthly--range-4 {
     background: #ff4e11;
+    color: white;
 }
 table td.monthly--range-5 {
     background: #ff0d0d;
+    color: white;
 }
 
 table th.nedelja {
